@@ -12,6 +12,7 @@ export const styles = StyleSheet.create({
         borderRadius: 8,
         flexDirection: 'row',
         alignItems: 'center',
+
         
     },
 
@@ -34,6 +35,7 @@ export const styles = StyleSheet.create({
     text: {
         flex: 1,
         color: theme.colors.heading,
+        fontFamily: theme.fonts.text500,
         textAlign: 'center',
     },
 
