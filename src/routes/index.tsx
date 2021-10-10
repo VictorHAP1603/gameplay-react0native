@@ -9,13 +9,13 @@ const MyTheme = {
       ...DefaultTheme.colors,
       background: 'transparent',
     },
-  };
+};
   
 
 export function Routes() {
     return (
         <NavigationContainer theme={MyTheme} >
-            <AuthRoutes />
+          <AuthRoutes />
         </NavigationContainer>
     )
 }

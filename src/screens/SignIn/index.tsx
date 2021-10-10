@@ -14,13 +14,10 @@ import { useNavigation } from '@react-navigation/core';
 
 export function SignIn (){
     const navigation = useNavigation();
-    // const navigation = useLinkTo();
-
 
     function handleSignIn () {
         navigation.navigate("Home");
     }
-
 
     return (
         <View style={styles.container}>
