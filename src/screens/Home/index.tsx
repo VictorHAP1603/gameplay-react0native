@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { FlatList, SafeAreaView, Text, View } from "react-native";
+import { FlatList, SafeAreaView, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 import { styles } from "./style";
 
@@ -14,6 +15,7 @@ import { Background } from "../../components/Background";
 
 export const Home = () => {
   const [category, setCategory] = useState("1");
+  const navigation = useNavigation();
 
   const appointments = [
     {
@@ -49,6 +51,10 @@ export const Home = () => {
     categoryId === category ? setCategory("") : setCategory(categoryId);
   }
 
+  function handleAppointmentDetails() {
+    navigation.navigate("AppointmentDetails");
+  }
+
   return (
     <Background>
       <SafeAreaView style={styles.container}>
@@ -71,7 +77,9 @@ export const Home = () => {
             style={styles.matches}
             showsHorizontalScrollIndicator={false}
             ItemSeparatorComponent={() => <ListDivider />}
-            renderItem={({ item }) => <Appointment data={item} />}
+            renderItem={({ item }) => (
+              <Appointment onPress={handleAppointmentDetails} data={item} />
+            )}
           />
         </View>
       </SafeAreaView>
