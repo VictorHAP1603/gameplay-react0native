@@ -1,21 +1,22 @@
-import React from 'react'
-import { NavigationContainer, DefaultTheme } from '@react-navigation/native'
+import React from "react";
+import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 
-import { AuthRoutes } from './Auth.routes'
+import { theme } from "../global/styles/theme";
+
+import { AuthRoutes } from "./Auth.routes";
 
 const MyTheme = {
-    ...DefaultTheme,
-    colors: {
-      ...DefaultTheme.colors,
-      background: 'transparent',
-    },
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    background: theme.colors.secondary100,
+  },
 };
-  
 
 export function Routes() {
-    return (
-        <NavigationContainer theme={MyTheme} >
-          <AuthRoutes />
-        </NavigationContainer>
-    )
+  return (
+    <NavigationContainer theme={MyTheme}>
+      <AuthRoutes />
+    </NavigationContainer>
+  );
 }
