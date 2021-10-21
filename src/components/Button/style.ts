@@ -14,22 +14,6 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
 
-  iconWrapper: {
-    width: 56,
-    height: 56,
-
-    justifyContent: "center",
-    alignItems: "center",
-
-    borderRightColor: theme.colors.line,
-    borderRightWidth: 1,
-  },
-
-  icon: {
-    width: 24,
-    height: 18,
-  },
-
   text: {
     flex: 1,
     color: theme.colors.heading,

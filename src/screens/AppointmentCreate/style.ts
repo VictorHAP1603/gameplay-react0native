@@ -20,48 +20,57 @@ export const styles = StyleSheet.create({
 
   select: {
     height: 68,
-    width: '100%',
+    width: "100%",
 
-    flexDirection: 'row',
+    flexDirection: "row",
     borderColor: theme.colors.secondary50,
     borderWidth: 1,
     borderRadius: 8,
-    alignItems: 'center',
+    alignItems: "center",
     paddingRight: 25,
-    overflow: 'hidden',
+    overflow: "hidden",
   },
 
   selectBody: {
     flex: 1,
-    alignItems: 'center',
+    alignItems: "center",
   },
 
   image: {
     width: 64,
     height: 68,
     backgroundColor: theme.colors.secondary50,
-    borderRadius: 8
+    borderRadius: 8,
   },
 
   field: {
-    width: '100%',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginTop: 30
+    width: "100%",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 30,
   },
 
   column: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginTop: 15
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 12,
   },
 
   divider: {
     marginRight: 4,
     fontSize: 15,
     fontFamily: theme.fonts.text500,
-    color: theme.colors.highlight
-  }
+    color: theme.colors.highlight,
+  },
 
+  caracteresLimit: {
+    fontFamily: theme.fonts.text400,
+    fontSize: 13,
+    color: theme.colors.highlight,
+  },
 
+  footer: {
+    marginVertical: 20,
+    marginBottom: 56,
+  },
 });
