@@ -15,7 +15,7 @@ import { SmallInput } from "../../components/SmallInput";
 
 
 export const AppointmentCreate = () => {
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("1");
 
 
   return (
