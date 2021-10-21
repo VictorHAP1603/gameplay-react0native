@@ -6,11 +6,14 @@ import { Fontisto } from "@expo/vector-icons";
 import { styles } from "./style";
 import { theme } from "../../global/styles/theme";
 
+import BannerImg from "../../assets/banner.png";
+
 import { Background } from "../../components/Background";
 import { Header } from "../../components/Header";
 import { ListHeader } from "../../components/ListHeader";
-
-import BannerImg from "../../assets/banner.png";
+import { Member } from "../../components/Member";
+import { ListDivider } from "../../components/ListDivider";
+import { ButtonIcon } from "../../components/ButtonIcon";
 
 export const AppointmentDetails = () => {
   const members = [
@@ -54,10 +57,17 @@ export const AppointmentDetails = () => {
       <FlatList
         data={members}
         keyExtractor={item => item.id}
+        style={styles.listUsers}
         renderItem={({ item }) => (
-            
+          <Member data={item} />
         )}
+        ItemSeparatorComponent={() => <ListDivider />}
       />
+
+      <View style={styles.footer}>
+        <ButtonIcon title="Entrar na partida" />
+      </View>
+
     </Background>
   );
 };

@@ -17,6 +17,8 @@ type Props = {
 };
 
 export const Member = ({ data }: Props) => {
+  const isOnline = data.status === 'online';
+
   return (
     <View style={styles.container}>
       <Avatar urlImg={data.avatar_url} />
@@ -25,8 +27,8 @@ export const Member = ({ data }: Props) => {
         <Text style={styles.title}>{data.username}</Text>
 
         <View style={styles.containerStatus}>
-          <View style={styles.statusColor} />
-          <Text style={styles.status}></Text>
+          <View style={[styles.statusColor, isOnline ? styles.on : styles.off]} />
+          <Text style={styles.status}> {isOnline ? 'Disponível' : 'Ocupado'} </Text>
         </View>
       </View>
     </View>

@@ -6,10 +6,10 @@ import { Rajdhani_700Bold, Rajdhani_500Medium } from '@expo-google-fonts/rajdhan
 import AppLoading from 'expo-app-loading'
 
 
-import { Background } from './src/components/Background'; 
+import { Background } from './src/components/Background';
 import { Routes } from './src/routes';
 
-export default function App (){
+export default function App() {
 
   const [fontsLoaded] = useFonts({
     Inter_400Regular,
@@ -24,7 +24,7 @@ export default function App (){
 
   return (
     <Background>
-      <StatusBar 
+      <StatusBar
         barStyle="light-content"
         backgroundColor="transparent"
         translucent
