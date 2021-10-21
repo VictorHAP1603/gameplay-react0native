@@ -55,12 +55,16 @@ export const Home = () => {
     navigation.navigate("AppointmentDetails");
   }
 
+  function handleAppointmentCreate() {
+    navigation.navigate("AppointmentCreate");
+  }
+
   return (
     <Background>
       <SafeAreaView style={styles.container}>
         <View style={styles.header}>
           <Profile />
-          <ButtonAdd activeOpacity={0.7} />
+          <ButtonAdd activeOpacity={0.7} onPress={handleAppointmentCreate} />
         </View>
 
         <CategorySelect
